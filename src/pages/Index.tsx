@@ -11,7 +11,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden py-32">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -19,27 +19,27 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10 pt-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-block mb-4 px-4 py-2 bg-primary/10 border border-primary rounded-full text-primary text-sm font-semibold">
+        <div className="container mx-auto px-6 md:px-8 relative z-10 pt-20">
+          <div className="text-center max-w-5xl mx-auto">
+            <div className="inline-block mb-8 px-6 py-3 bg-primary/20 border-2 border-primary rounded-full text-primary text-sm font-bold shadow-neon-cyan">
               Exclusive for First-Year Students
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-accent bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-8xl font-bold mb-8">
+              <span className="bg-gradient-vibrant bg-clip-text text-transparent drop-shadow-glow">
                 BYTEWARS
               </span>
             </h1>
             
-            <p className="text-3xl md:text-4xl font-semibold mb-4 text-foreground">
+            <p className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               The Mini Hackathon
             </p>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+            <p className="text-2xl md:text-3xl text-muted-foreground mb-12 font-semibold">
               Code. Create. Conquer.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <div className="flex items-center gap-2 text-foreground">
                 <Clock className="w-5 h-5 text-primary" />
                 <span>December 10, 2025</span>
@@ -51,15 +51,15 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="mb-12">
+            <div className="mb-16">
               <Countdown targetDate="2025-12-10T09:30:00" />
             </div>
             
-            <div className="flex gap-4 justify-center">
-              <Button variant="hero" size="lg" className="text-lg px-8">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button variant="hero" size="lg" className="text-xl px-12 py-6 h-auto">
                 Register Now
               </Button>
-              <Button variant="neon" size="lg" className="text-lg px-8">
+              <Button variant="neon" size="lg" className="text-xl px-12 py-6 h-auto">
                 Learn More
               </Button>
             </div>
@@ -68,20 +68,20 @@ const Index = () => {
       </section>
 
       {/* Highlights Section */}
-      <section className="py-20 bg-gradient-primary">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="py-32 bg-gradient-primary">
+        <div className="container mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: Code, title: "6-Hour Marathon", desc: "Intense coding session" },
               { icon: Lightbulb, title: "Creative Problem-Solving", desc: "Think outside the box" },
               { icon: Trophy, title: "Exciting Prizes", desc: "Win amazing rewards" },
               { icon: Users, title: "Team Collaboration", desc: "Build together" },
             ].map((item, index) => (
-              <Card key={index} className="bg-card border-border shadow-card hover:shadow-neon-cyan transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <item.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                  <h3 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.desc}</p>
+              <Card key={index} className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-cyan hover:border-primary transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <item.icon className="w-16 h-16 mx-auto mb-6 text-primary drop-shadow-glow" />
+                  <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
+                  <p className="text-muted-foreground text-base">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -90,32 +90,32 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              About <span className="text-primary">ByteWars</span>
+      <section id="about" className="py-32">
+        <div className="container mx-auto px-6 md:px-8 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              About <span className="text-primary drop-shadow-glow">ByteWars</span>
             </h2>
-            <div className="h-1 w-20 bg-gradient-accent mx-auto mb-6"></div>
+            <div className="h-2 w-32 bg-gradient-vibrant mx-auto mb-8 rounded-full shadow-glow"></div>
           </div>
           
-          <Card className="bg-card border-border shadow-card">
-            <CardContent className="p-8">
-              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+          <Card className="bg-card border-2 border-primary/30 shadow-card hover:shadow-glow transition-shadow">
+            <CardContent className="p-10">
+              <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
                 ByteWars is a beginner-friendly hackathon designed exclusively for first-year engineering 
                 students to introduce them to coding, teamwork, and innovation.
               </p>
-              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
                 Organized by senior students of the Department of Computer Science and Electronics, 
                 with mentorship from faculty members.
               </p>
-              <div className="bg-primary/10 border-l-4 border-primary p-4 rounded">
-                <p className="text-foreground font-semibold">
-                  <Sparkles className="inline w-5 h-5 mr-2 text-primary" />
+              <div className="bg-primary/20 border-l-4 border-primary p-6 rounded-lg shadow-neon-cyan">
+                <p className="text-foreground font-bold text-lg">
+                  <Sparkles className="inline w-6 h-6 mr-3 text-primary" />
                   Mission: To create a fun, hands-on platform for learning and collaboration.
                 </p>
               </div>
-              <p className="text-muted-foreground mt-4 italic">
+              <p className="text-muted-foreground mt-6 italic text-lg">
                 Started by a group of tech enthusiasts who wanted to make hackathons accessible to beginners.
               </p>
             </CardContent>
@@ -124,16 +124,16 @@ const Index = () => {
       </section>
 
       {/* Schedule Section */}
-      <section id="schedule" className="py-20 bg-gradient-primary">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Event <span className="text-primary">Schedule</span>
+      <section id="schedule" className="py-32 bg-gradient-primary">
+        <div className="container mx-auto px-6 md:px-8 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              Event <span className="text-primary drop-shadow-glow">Schedule</span>
             </h2>
-            <div className="h-1 w-20 bg-gradient-accent mx-auto mb-6"></div>
+            <div className="h-2 w-32 bg-gradient-vibrant mx-auto mb-8 rounded-full shadow-glow"></div>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             {[
               { time: "9:30 AM", activity: "Registration & Team Setup" },
               { time: "10:00 AM", activity: "Opening Ceremony + Theme Reveal" },
@@ -142,12 +142,12 @@ const Index = () => {
               { time: "3:30 PM", activity: "Demo Presentations" },
               { time: "4:30 PM", activity: "Judging & Results Announcement" },
             ].map((item, index) => (
-              <Card key={index} className="bg-card border-border shadow-card hover:border-primary transition-colors">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="bg-primary/20 border border-primary rounded-lg px-4 py-2 min-w-[140px]">
-                    <p className="text-primary font-bold">{item.time}</p>
+              <Card key={index} className="bg-card border-2 border-primary/30 shadow-card hover:border-primary hover:shadow-neon-cyan transition-all duration-300">
+                <CardContent className="p-8 flex items-center gap-6">
+                  <div className="bg-primary/30 border-2 border-primary rounded-lg px-6 py-4 min-w-[160px] shadow-neon-cyan">
+                    <p className="text-primary font-bold text-lg">{item.time}</p>
                   </div>
-                  <p className="text-foreground font-semibold">{item.activity}</p>
+                  <p className="text-foreground font-bold text-lg">{item.activity}</p>
                 </CardContent>
               </Card>
             ))}
@@ -156,17 +156,17 @@ const Index = () => {
       </section>
 
       {/* Rules & Judging */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8">
+      <section className="py-32">
+        <div className="container mx-auto px-6 md:px-8 max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12">
             {/* Rules */}
             <div>
-              <h3 className="text-3xl font-bold mb-6 text-foreground">
-                Rules & <span className="text-primary">Guidelines</span>
+              <h3 className="text-4xl font-bold mb-8 text-foreground">
+                Rules & <span className="text-primary drop-shadow-glow">Guidelines</span>
               </h3>
-              <Card className="bg-card border-border shadow-card">
-                <CardContent className="p-6">
-                  <ul className="space-y-3">
+              <Card className="bg-card border-2 border-accent/30 shadow-card hover:shadow-neon-orange transition-shadow">
+                <CardContent className="p-8">
+                  <ul className="space-y-5">
                     {[
                       "Teams of 3–4 members",
                       "Must be first-year students (any branch)",
@@ -174,9 +174,9 @@ const Index = () => {
                       "Focus on creativity and practicality",
                       "Use of AI tools is allowed (ChatGPT, Canva, etc.)",
                     ].map((rule, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground">{rule}</span>
+                      <li key={index} className="flex items-start gap-4">
+                        <div className="w-3 h-3 rounded-full bg-accent mt-2 flex-shrink-0 shadow-neon-orange"></div>
+                        <span className="text-muted-foreground text-lg">{rule}</span>
                       </li>
                     ))}
                   </ul>
@@ -186,12 +186,12 @@ const Index = () => {
 
             {/* Judging Criteria */}
             <div>
-              <h3 className="text-3xl font-bold mb-6 text-foreground">
-                Judging <span className="text-primary">Criteria</span>
+              <h3 className="text-4xl font-bold mb-8 text-foreground">
+                Judging <span className="text-primary drop-shadow-glow">Criteria</span>
               </h3>
-              <Card className="bg-card border-border shadow-card">
-                <CardContent className="p-6">
-                  <div className="space-y-4">
+              <Card className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-cyan transition-shadow">
+                <CardContent className="p-8">
+                  <div className="space-y-6">
                     {[
                       { category: "Innovation & Creativity", weight: "25%" },
                       { category: "Relevance to Theme", weight: "20%" },
@@ -199,9 +199,9 @@ const Index = () => {
                       { category: "Teamwork & Presentation", weight: "20%" },
                       { category: "Feasibility / Impact", weight: "10%" },
                     ].map((item, index) => (
-                      <div key={index} className="flex justify-between items-center">
-                        <span className="text-muted-foreground">{item.category}</span>
-                        <span className="text-primary font-bold">{item.weight}</span>
+                      <div key={index} className="flex justify-between items-center py-2">
+                        <span className="text-muted-foreground text-lg">{item.category}</span>
+                        <span className="text-primary font-bold text-xl">{item.weight}</span>
                       </div>
                     ))}
                   </div>
@@ -213,16 +213,16 @@ const Index = () => {
       </section>
 
       {/* Prizes Section */}
-      <section id="prizes" className="py-20 bg-gradient-primary">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Prizes & <span className="text-primary">Recognition</span>
+      <section id="prizes" className="py-32 bg-gradient-primary">
+        <div className="container mx-auto px-6 md:px-8 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              Prizes & <span className="text-primary drop-shadow-glow">Recognition</span>
             </h2>
-            <div className="h-1 w-20 bg-gradient-accent mx-auto mb-6"></div>
+            <div className="h-2 w-32 bg-gradient-vibrant mx-auto mb-8 rounded-full shadow-glow"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {[
               { icon: "🥇", title: "ByteWars Champions", prize: "Trophy + Certificates", highlight: true },
               { icon: "🥈", title: "Best Innovation", prize: "Certificate + Goodies" },
@@ -231,14 +231,14 @@ const Index = () => {
             ].map((item, index) => (
               <Card 
                 key={index} 
-                className={`bg-card border-border shadow-card ${
-                  item.highlight ? "border-accent shadow-neon-orange" : ""
+                className={`bg-card shadow-card transition-all duration-300 ${
+                  item.highlight ? "border-3 border-accent shadow-neon-orange scale-105" : "border-2 border-primary/30 hover:shadow-neon-cyan"
                 }`}
               >
-                <CardContent className="p-6 text-center">
-                  <div className="text-5xl mb-3">{item.icon}</div>
-                  <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.prize}</p>
+                <CardContent className="p-10 text-center">
+                  <div className="text-6xl mb-6">{item.icon}</div>
+                  <h3 className="text-2xl font-bold mb-4 text-foreground">{item.title}</h3>
+                  <p className="text-muted-foreground text-lg">{item.prize}</p>
                 </CardContent>
               </Card>
             ))}
@@ -247,43 +247,43 @@ const Index = () => {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-20">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Organizing <span className="text-primary">Team</span>
+      <section id="team" className="py-32">
+        <div className="container mx-auto px-6 md:px-8 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              Organizing <span className="text-primary drop-shadow-glow">Team</span>
             </h2>
-            <div className="h-1 w-20 bg-gradient-accent mx-auto mb-6"></div>
-            <p className="text-muted-foreground text-lg">Meet the people behind ByteWars</p>
+            <div className="h-2 w-32 bg-gradient-vibrant mx-auto mb-8 rounded-full shadow-glow"></div>
+            <p className="text-muted-foreground text-xl">Meet the people behind ByteWars</p>
           </div>
 
-          <div className="text-center mb-8">
-            <Card className="bg-card border-border shadow-card inline-block">
-              <CardContent className="p-8">
-                <Award className="w-12 h-12 mx-auto mb-4 text-accent" />
-                <h3 className="text-xl font-bold text-foreground mb-2">Faculty Coordinator</h3>
-                <p className="text-muted-foreground">Name & Designation</p>
+          <div className="text-center mb-16">
+            <Card className="bg-card border-2 border-accent/30 shadow-card hover:shadow-neon-orange inline-block transition-shadow">
+              <CardContent className="p-12">
+                <Award className="w-16 h-16 mx-auto mb-6 text-accent drop-shadow-glow" />
+                <h3 className="text-2xl font-bold text-foreground mb-3">Faculty Coordinator</h3>
+                <p className="text-muted-foreground text-lg">Name & Designation</p>
               </CardContent>
             </Card>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               { role: "Event Coordinator", name: "Student Name" },
               { role: "Tech Mentor", name: "Student Name" },
               { role: "Designer", name: "Student Name" },
             ].map((member, index) => (
-              <Card key={index} className="bg-card border-border shadow-card hover:shadow-neon-cyan transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 rounded-full bg-gradient-accent mx-auto mb-4"></div>
-                  <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
-                  <p className="text-primary font-semibold mb-3">{member.role}</p>
-                  <div className="flex gap-2 justify-center">
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Card key={index} className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-cyan hover:border-primary transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="w-32 h-32 rounded-full bg-gradient-vibrant mx-auto mb-6 shadow-glow"></div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{member.name}</h3>
+                  <p className="text-primary font-bold mb-6 text-lg">{member.role}</p>
+                  <div className="flex gap-3 justify-center">
+                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-semibold">
                       LinkedIn
                     </a>
                     <span className="text-muted-foreground">•</span>
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-semibold">
                       Instagram
                     </a>
                   </div>
@@ -295,24 +295,24 @@ const Index = () => {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Ready to <span className="text-primary">Compete?</span>
+      <section className="py-32 bg-gradient-hero">
+        <div className="container mx-auto px-6 md:px-8 text-center">
+          <h2 className="text-5xl md:text-6xl font-bold mb-8">
+            Ready to <span className="text-primary drop-shadow-glow">Compete?</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
             Join us for an unforgettable coding experience. Register now and be part of ByteWars!
           </p>
-          <Button variant="hero" size="lg" className="text-lg px-12">
+          <Button variant="hero" size="lg" className="text-xl px-16 py-6 h-auto shadow-neon-orange">
             Register for ByteWars
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-background border-t border-border py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-muted-foreground">
+      <footer className="bg-background border-t-2 border-primary/30 py-12">
+        <div className="container mx-auto px-6 md:px-8 text-center">
+          <p className="text-muted-foreground text-lg">
             © 2025 ByteWars. Organized by Department of Computer Science and Electronics, SJCE Mysuru
           </p>
         </div>
