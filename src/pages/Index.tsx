@@ -1,5 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Countdown } from "@/components/Countdown";
+import { ParticlesBackground } from "@/components/ParticlesBackground";
+import { FloatingShapes } from "@/components/FloatingShapes";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Code, Lightbulb, Trophy, Users, Clock, Target, Sparkles, Award } from "lucide-react";
@@ -18,6 +20,10 @@ const Index = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background"></div>
         </div>
+        
+        {/* Animated Background Elements */}
+        <ParticlesBackground />
+        <FloatingShapes />
         
         <div className="container mx-auto px-6 md:px-8 relative z-10 pt-20">
           <div className="text-center max-w-5xl mx-auto">
