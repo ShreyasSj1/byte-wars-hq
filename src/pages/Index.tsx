@@ -113,21 +113,25 @@ const Index = () => {
           <Card className="bg-card border-2 border-primary/30 shadow-card hover:shadow-glow transition-shadow">
             <CardContent className="p-10">
               <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                ByteWars is a beginner-friendly hackathon designed exclusively for first-year engineering 
-                students to introduce them to coding, teamwork, and innovation.
+                🚀 Get ready for an 8-hour coding adrenaline rush! BYTEWARS is your high-octane mini-hackathon 
+                where time is your fiercest competitor. Ditch the lectures and dive into real-world problem-solving.
               </p>
               <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                Organized by senior students of the Department of Computer Science and Electronics, 
-                with mentorship from faculty members.
+                This battle is designed and run by the seasoned senior students of the Computer Science Department—they 
+                know exactly what it takes to win! Plus, you'll have expert mentorship from our dedicated faculty 
+                members to keep your code sharp and your ideas focused.
               </p>
-              <div className="bg-primary/20 border-l-4 border-primary p-6 rounded-lg shadow-neon-cyan">
-                <p className="text-foreground font-bold text-lg">
+              <div className="bg-primary/20 border-l-4 border-primary p-6 rounded-lg shadow-neon-cyan mb-6">
+                <p className="text-foreground font-bold text-lg mb-3">
                   <Sparkles className="inline w-6 h-6 mr-3 text-primary" />
-                  Mission: To create a fun, hands-on platform for learning and collaboration.
+                  ⚡️ The Challenge: 8 intense hours to build an innovative tech solution.
+                </p>
+                <p className="text-foreground font-bold text-lg">
+                  🤝 The Vibe: Fast-paced, fiercely collaborative, and perfect for students who love solving problems through code.
                 </p>
               </div>
-              <p className="text-muted-foreground mt-6 italic text-lg">
-                Started by a group of tech enthusiasts who wanted to make hackathons accessible to beginners.
+              <p className="text-muted-foreground text-lg font-semibold">
+                Bring your brilliant ideas, rally your dream team, and let's turn coffee into code. The clock is ticking—are you ready to make every byte count?
               </p>
             </CardContent>
           </Card>
@@ -146,12 +150,12 @@ const Index = () => {
 
           <div className="space-y-6">
             {[
-              { time: "9:30 AM", activity: "Registration & Team Setup" },
-              { time: "10:00 AM", activity: "Opening Ceremony + Theme Reveal" },
-              { time: "10:30 AM", activity: "Idea Submission & Brainstorming" },
-              { time: "11:30 AM – 3:30 PM", activity: "Project Development Phase" },
+              { time: "9:00 AM – 9:30 AM", activity: "Registration and Reporting" },
+              { time: "9:30 AM – 10:00 AM", activity: "Opening Ceremony + Theme Reveal" },
+              { time: "10:00 AM – 10:30 AM", activity: "Idea Submission" },
+              { time: "10:30 AM – 3:30 PM", activity: "Brainstorming and Project Development Phase" },
               { time: "3:30 PM", activity: "Demo Presentations" },
-              { time: "4:30 PM", activity: "Judging & Results Announcement" },
+              { time: "4:30 PM", activity: "Results Announcement" },
             ].map((item, index) => (
               <Card key={index} className="bg-card border-2 border-primary/30 shadow-card hover:border-primary hover:shadow-neon-cyan transition-all duration-300">
                 <CardContent className="p-8 flex items-center gap-6">
