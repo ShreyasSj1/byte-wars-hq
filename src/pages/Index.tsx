@@ -5,7 +5,7 @@ import { FloatingShapes } from "@/components/FloatingShapes";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Code, Lightbulb, Trophy, Users, Clock, Target, Sparkles, Award } from "lucide-react";
-import heroImage from "@/assets/bytewars-hero.jpg";
+import heroImage from "@/assets/bytewars-hero-new.jpg";
 
 const Index = () => {
   return (
