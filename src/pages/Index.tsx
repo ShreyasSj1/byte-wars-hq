@@ -62,7 +62,12 @@ const Index = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button variant="hero" size="lg" className="text-xl px-12 py-6 h-auto">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="text-xl px-12 py-6 h-auto"
+                onClick={() => window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank')}
+              >
                 Register Now
               </Button>
               <Button variant="neon" size="lg" className="text-xl px-12 py-6 h-auto">
@@ -309,7 +314,12 @@ const Index = () => {
           <p className="text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
             Join us for an unforgettable coding experience. Register now and be part of ByteWars!
           </p>
-          <Button variant="hero" size="lg" className="text-xl px-16 py-6 h-auto shadow-neon-orange">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="text-xl px-16 py-6 h-auto shadow-neon-orange"
+            onClick={() => window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank')}
+          >
             Register for ByteWars
           </Button>
         </div>
