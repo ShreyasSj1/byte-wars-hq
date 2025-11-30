@@ -58,7 +58,12 @@ export const Navigation = () => {
             </div>
 
             {/* Desktop CTA */}
-            <Button variant="hero" size="sm" className="hidden md:inline-flex">
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="hidden md:inline-flex"
+              onClick={() => window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank')}
+            >
               Register Now
             </Button>
 
@@ -104,6 +109,7 @@ export const Navigation = () => {
             size="lg"
             className="mt-4 w-full animate-fade-in"
             style={{ animationDelay: "250ms" }}
+            onClick={() => window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank')}
           >
             Register Now
           </Button>
