@@ -70,9 +70,6 @@ const Index = () => {
               >
                 Register Now
               </Button>
-              <Button variant="neon" size="lg" className="text-xl px-12 py-6 h-auto">
-                Learn More
-              </Button>
             </div>
           </div>
         </div>
