@@ -330,7 +330,7 @@ const Index = () => {
       <footer className="bg-background border-t-2 border-primary/30 py-12">
         <div className="container mx-auto px-6 md:px-8 text-center">
           <p className="text-muted-foreground text-lg">
-            © 2025 ByteWars. Organized by Department of Computer Science and Electronics, PDA College, Kalaburgi
+            © 2025 ByteWars. Organized by Department of CSE, PDACEK
           </p>
         </div>
       </footer>
