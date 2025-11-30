@@ -53,7 +53,7 @@ const Index = () => {
               <div className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground"></div>
               <div className="flex items-center gap-2 text-foreground">
                 <Target className="w-5 h-5 text-primary" />
-                <span>ECE Seminar Hall, SJCE Mysuru</span>
+                <span>PDA College, Kalaburgi</span>
               </div>
             </div>
             
@@ -330,7 +330,7 @@ const Index = () => {
       <footer className="bg-background border-t-2 border-primary/30 py-12">
         <div className="container mx-auto px-6 md:px-8 text-center">
           <p className="text-muted-foreground text-lg">
-            © 2025 ByteWars. Organized by Department of Computer Science and Electronics, SJCE Mysuru
+            © 2025 ByteWars. Organized by Department of Computer Science and Electronics, PDA College, Kalaburgi
           </p>
         </div>
       </footer>
