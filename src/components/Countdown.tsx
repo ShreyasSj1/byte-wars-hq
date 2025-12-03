@@ -41,16 +41,16 @@ export const Countdown = ({ targetDate }: { targetDate: string }) => {
   ];
 
   return (
-    <div className="flex gap-6 justify-center flex-wrap">
+    <div className="flex gap-2 sm:gap-4 md:gap-6 justify-center flex-wrap px-2">
       {timeUnits.map((unit) => (
         <div
           key={unit.label}
-          className="bg-card border-2 border-primary rounded-xl p-6 min-w-[100px] shadow-neon-cyan hover:scale-105 transition-transform"
+          className="bg-card border-2 border-primary rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 min-w-[70px] sm:min-w-[85px] md:min-w-[100px] shadow-neon-cyan hover:scale-105 transition-transform flex-1 sm:flex-none max-w-[90px] sm:max-w-none"
         >
-          <div className="text-4xl font-bold text-primary mb-2 drop-shadow-glow">
+          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1 sm:mb-2 drop-shadow-glow text-center">
             {String(unit.value).padStart(2, "0")}
           </div>
-          <div className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">
+          <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider font-semibold text-center">
             {unit.label}
           </div>
         </div>
