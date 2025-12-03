@@ -58,7 +58,7 @@ const Index = () => {
                 className="text-base sm:text-xl px-8 sm:px-12 py-4 sm:py-6 h-auto w-full sm:w-auto"
                 onClick={() => window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank')}
               >
-                Join the Evolution
+                Register Now
               </Button>
             </div>
           </div>
@@ -314,7 +314,7 @@ const Index = () => {
             className="text-base sm:text-lg md:text-xl px-10 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 h-auto shadow-neon-pink w-full sm:w-auto max-w-md mx-auto"
             onClick={() => window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank')}
           >
-            Join AIvolve Now
+            Register Now
           </Button>
         </div>
       </section>
