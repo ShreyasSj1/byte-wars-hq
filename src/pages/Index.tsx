@@ -21,10 +21,6 @@ const Index = () => {
         
         <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10 pt-16 sm:pt-20">
           <div className="text-center max-w-5xl mx-auto">
-            <div className="inline-block mb-6 sm:mb-8 px-4 sm:px-6 py-2 sm:py-3 bg-primary/20 border-2 border-primary rounded-full text-primary text-xs sm:text-sm font-bold shadow-neon-purple">
-              Exclusive for First-Year Students
-            </div>
-            
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 sm:mb-8 font-[Orbitron]">
               <span className="bg-gradient-vibrant bg-clip-text text-transparent drop-shadow-glow">
                 AIvolve
