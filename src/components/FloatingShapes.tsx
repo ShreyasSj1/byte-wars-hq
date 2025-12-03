@@ -21,7 +21,7 @@ export const FloatingShapes = () => {
           }}
         >
           {index % 3 === 0 ? (
-            // Hexagon
+            // Hexagon - Neural network node
             <div
               className="animate-float"
               style={{
@@ -38,7 +38,7 @@ export const FloatingShapes = () => {
                 }}
               >
                 <div
-                  className="absolute inset-0 bg-gradient-vibrant"
+                  className="absolute inset-0 bg-gradient-neural"
                   style={{
                     clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
                   }}
@@ -46,27 +46,26 @@ export const FloatingShapes = () => {
               </div>
             </div>
           ) : index % 3 === 1 ? (
-            // Triangle
+            // Diamond - AI crystal
             <div
-              className="animate-float border-gradient-accent"
-              style={{
-                width: 0,
-                height: 0,
-                borderLeft: `${shape.size / 2}px solid transparent`,
-                borderRight: `${shape.size / 2}px solid transparent`,
-                borderBottom: `${shape.size}px solid`,
-                borderBottomColor: "hsl(var(--neon-cyan))",
-                transform: `rotate(${shape.rotation}deg)`,
-              }}
-            />
-          ) : (
-            // Circle
-            <div
-              className="animate-float rounded-full bg-gradient-accent"
+              className="animate-float"
               style={{
                 width: shape.size,
                 height: shape.size,
-                transform: `rotate(${shape.rotation}deg)`,
+                transform: `rotate(45deg)`,
+                background: "linear-gradient(135deg, hsl(250 85% 65%) 0%, hsl(320 85% 60%) 100%)",
+                borderRadius: "4px",
+              }}
+            />
+          ) : (
+            // Circle with glow - Neural pulse
+            <div
+              className="animate-float rounded-full"
+              style={{
+                width: shape.size,
+                height: shape.size,
+                background: "linear-gradient(135deg, hsl(220 90% 60%) 0%, hsl(280 80% 65%) 100%)",
+                boxShadow: "0 0 20px hsla(250, 85%, 65%, 0.3)",
               }}
             />
           )}

@@ -45,9 +45,9 @@ export const Navigation = () => {
             {/* Logo with hover effect */}
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-xl md:text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(0,217,217,0.5)]"
+              className="text-xl md:text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.5)] font-[Orbitron]"
             >
-              BYTEWARS
+              AIvolve
             </button>
             
             {/* Desktop Navigation */}
@@ -68,10 +68,10 @@ export const Navigation = () => {
             <Button 
               variant="hero" 
               size="sm" 
-              className="hidden md:inline-flex transition-all duration-250 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,217,217,0.4)]"
+              className="hidden md:inline-flex transition-all duration-250 hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]"
               onClick={() => window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank')}
             >
-              Register Now
+              Join Now
             </Button>
 
             {/* Mobile Menu Button with animation */}
@@ -119,14 +119,14 @@ export const Navigation = () => {
           <Button
             variant="hero"
             size="lg"
-            className="mt-6 w-full animate-fade-in transition-all duration-250 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,217,217,0.4)]"
+            className="mt-6 w-full animate-fade-in transition-all duration-250 hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]"
             style={{ animationDelay: "250ms" }}
             onClick={() => {
               window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank');
               setIsMobileMenuOpen(false);
             }}
           >
-            Register Now
+            Join Now
           </Button>
         </div>
       </div>

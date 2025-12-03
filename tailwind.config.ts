@@ -48,10 +48,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         neon: {
-          cyan: "hsl(var(--neon-cyan))",
-          orange: "hsl(var(--neon-orange))",
-          pink: "hsl(var(--neon-pink))",
+          blue: "hsl(var(--neon-blue))",
           purple: "hsl(var(--neon-purple))",
+          pink: "hsl(var(--neon-pink))",
+          violet: "hsl(var(--neon-violet))",
         },
       },
       backgroundImage: {
@@ -59,10 +59,12 @@ export default {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-accent': 'var(--gradient-accent)',
         'gradient-vibrant': 'var(--gradient-vibrant)',
+        'gradient-neural': 'var(--gradient-neural)',
       },
       boxShadow: {
-        'neon-cyan': 'var(--shadow-neon-cyan)',
-        'neon-orange': 'var(--shadow-neon-orange)',
+        'neon-blue': 'var(--shadow-neon-blue)',
+        'neon-purple': 'var(--shadow-neon-purple)',
+        'neon-pink': 'var(--shadow-neon-pink)',
         'card': 'var(--shadow-card)',
         'glow': 'var(--shadow-glow)',
       },
@@ -110,6 +112,10 @@ export default {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" }
         },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 20px hsla(250, 85%, 65%, 0.4)" },
+          "50%": { boxShadow: "0 0 40px hsla(250, 85%, 65%, 0.7)" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -118,6 +124,7 @@ export default {
         "slide-in-right": "slide-in-right 0.3s ease-out",
         "slide-out-right": "slide-out-right 0.3s ease-out",
         "float": "float 6s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
     },
   },

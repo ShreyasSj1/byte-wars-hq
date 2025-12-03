@@ -32,28 +32,30 @@ export const ParticlesBackground = () => {
           },
           onHover: {
             enable: true,
-            mode: "repulse",
+            mode: "grab",
           },
         },
         modes: {
           push: {
             quantity: 4,
           },
-          repulse: {
-            distance: 100,
-            duration: 0.4,
+          grab: {
+            distance: 140,
+            links: {
+              opacity: 0.5,
+            },
           },
         },
       },
       particles: {
         color: {
-          value: ["#06b6d4", "#f97316", "#e879f9", "#a855f7"],
+          value: ["#3b82f6", "#8b5cf6", "#ec4899", "#a855f7"],
         },
         links: {
-          color: "#06b6d4",
+          color: "#8b5cf6",
           distance: 150,
           enable: true,
-          opacity: 0.3,
+          opacity: 0.25,
           width: 1,
         },
         move: {
@@ -63,23 +65,23 @@ export const ParticlesBackground = () => {
             default: "bounce",
           },
           random: false,
-          speed: 1,
+          speed: 0.8,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 60,
         },
         opacity: {
-          value: 0.5,
+          value: 0.4,
         },
         shape: {
-          type: ["circle", "triangle", "polygon"],
+          type: ["circle"],
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 1, max: 4 },
         },
       },
       detectRetina: true,
