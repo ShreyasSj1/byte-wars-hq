@@ -178,6 +178,8 @@ const Index = () => {
                       "Working prototype or demo required",
                       "Focus on creativity and practical impact",
                       "AI tools are encouraged (ChatGPT, Canva, etc.)",
+                      "Solutions must be developed during the event — not fully pre-built beforehand",
+                      "A short write-up or documentation must accompany the final submission",
                     ].map((rule, index) => (
                       <li key={index} className="flex items-start gap-3 sm:gap-4">
                         <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-primary mt-1.5 sm:mt-2 flex-shrink-0 shadow-neon-purple"></div>
