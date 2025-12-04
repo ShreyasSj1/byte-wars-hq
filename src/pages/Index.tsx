@@ -228,25 +228,48 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-            {[
-              { icon: "🏆", title: "AIvolve Champions", prize: "Trophy + Certificates", highlight: true },
-              { icon: "💡", title: "Most Innovative", prize: "Certificate + Goodies" },
-              { icon: "🎯", title: "Best Presentation", prize: "Certificate" },
-              { icon: "🌟", title: "All Participants", prize: "Participation Certificates" },
-            ].map((item, index) => (
-              <Card 
-                key={index} 
-                className={`bg-card shadow-card transition-all duration-300 ${
-                  item.highlight ? "border-3 border-accent shadow-neon-pink sm:scale-105" : "border-2 border-primary/30 hover:shadow-neon-purple"
-                }`}
-              >
-                <CardContent className="p-6 sm:p-8 md:p-10 text-center">
-                  <div className="text-5xl sm:text-6xl mb-4 sm:mb-6">{item.icon}</div>
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">{item.title}</h3>
-                  <p className="text-muted-foreground text-base sm:text-lg">{item.prize}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {/* 1st Place - Most Prominent */}
+            <Card className="bg-card border-3 border-accent shadow-neon-pink sm:scale-105 transition-all duration-300 hover:shadow-[0_0_40px_rgba(236,72,153,0.5)] sm:col-span-2 md:col-span-1 md:row-span-2">
+              <CardContent className="p-8 sm:p-10 md:p-12 text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 pointer-events-none"></div>
+                <div className="relative z-10">
+                  <div className="text-6xl sm:text-7xl mb-6 drop-shadow-glow">🏆</div>
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-2 text-foreground">1st Place</h3>
+                  <p className="text-accent font-bold text-xl sm:text-2xl mb-4">AIvolve Champions</p>
+                  <div className="space-y-2">
+                    <p className="text-primary font-bold text-2xl sm:text-3xl">₹3000</p>
+                    <p className="text-muted-foreground text-base sm:text-lg">Trophy + Winning Certificates</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Runner-Up */}
+            <Card className="bg-card border-2 border-primary/50 shadow-card hover:shadow-neon-purple transition-all duration-300">
+              <CardContent className="p-6 sm:p-8 text-center">
+                <div className="text-5xl sm:text-6xl mb-4 sm:mb-5">🔥</div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 text-foreground">Runner-Up</h3>
+                <p className="text-muted-foreground text-base sm:text-lg">Certificate + Goodies</p>
+              </CardContent>
+            </Card>
+
+            {/* Best Presentation */}
+            <Card className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-purple transition-all duration-300">
+              <CardContent className="p-6 sm:p-8 text-center">
+                <div className="text-5xl sm:text-6xl mb-4 sm:mb-5">🎯</div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 text-foreground">Best Presentation</h3>
+                <p className="text-muted-foreground text-base sm:text-lg">Special Recognition Certificate</p>
+              </CardContent>
+            </Card>
+
+            {/* All Participants */}
+            <Card className="bg-card border-2 border-primary/20 shadow-card hover:shadow-neon-purple transition-all duration-300 sm:col-span-2 md:col-span-1">
+              <CardContent className="p-6 sm:p-8 text-center">
+                <div className="text-5xl sm:text-6xl mb-4 sm:mb-5">⭐</div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 text-foreground">All Participants</h3>
+                <p className="text-muted-foreground text-base sm:text-lg">Participation Certificates</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
