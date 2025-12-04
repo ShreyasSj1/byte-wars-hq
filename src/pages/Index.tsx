@@ -165,23 +165,23 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             {/* Rules */}
-            <div>
+            <div className="flex flex-col">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-foreground px-4 sm:px-0">
                 Guidelines & <span className="text-primary drop-shadow-glow">Principles</span>
               </h3>
-              <Card className="bg-card border-2 border-accent/30 shadow-card hover:shadow-neon-pink transition-shadow">
-                <CardContent className="p-6 sm:p-8">
+              <Card className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-purple transition-shadow flex-1">
+                <CardContent className="p-6 sm:p-8 h-full">
                   <ul className="space-y-4 sm:space-y-5">
                     {[
-                      "Teams of 3–4 members",
+                      "Teams of 3-5 members",
                       "Must be first-year students (any branch)",
                       "Working prototype or demo required",
                       "Focus on creativity and practical impact",
                       "AI tools are encouraged (ChatGPT, Canva, etc.)",
                     ].map((rule, index) => (
                       <li key={index} className="flex items-start gap-3 sm:gap-4">
-                        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-accent mt-1.5 sm:mt-2 flex-shrink-0 shadow-neon-pink"></div>
-                        <span className="text-muted-foreground text-sm sm:text-base md:text-lg">{rule}</span>
+                        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-primary mt-1.5 sm:mt-2 flex-shrink-0 shadow-neon-purple"></div>
+                        <span className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed">{rule}</span>
                       </li>
                     ))}
                   </ul>
@@ -190,13 +190,13 @@ const Index = () => {
             </div>
 
             {/* Judging Criteria */}
-            <div>
+            <div className="flex flex-col">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-foreground px-4 sm:px-0">
                 Evaluation <span className="text-primary drop-shadow-glow">Criteria</span>
               </h3>
-              <Card className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-purple transition-shadow">
-                <CardContent className="p-6 sm:p-8">
-                  <div className="space-y-4 sm:space-y-6">
+              <Card className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-purple transition-shadow flex-1">
+                <CardContent className="p-6 sm:p-8 h-full">
+                  <div className="space-y-4 sm:space-y-5">
                     {[
                       { category: "Innovation & Creativity", weight: "25%" },
                       { category: "Relevance to Theme", weight: "20%" },
@@ -205,7 +205,7 @@ const Index = () => {
                       { category: "Feasibility / Impact", weight: "10%" },
                     ].map((item, index) => (
                       <div key={index} className="flex justify-between items-center py-2">
-                        <span className="text-muted-foreground text-sm sm:text-base md:text-lg">{item.category}</span>
+                        <span className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed">{item.category}</span>
                         <span className="text-primary font-bold text-lg sm:text-xl">{item.weight}</span>
                       </div>
                     ))}
