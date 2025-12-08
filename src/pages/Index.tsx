@@ -125,40 +125,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Schedule Section */}
-      <section id="schedule" className="py-16 sm:py-24 md:py-32 bg-gradient-primary">
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-5xl">
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-4">
-              Event <span className="text-primary drop-shadow-glow">Schedule</span>
-            </h2>
-            <div className="h-2 w-24 sm:w-32 bg-gradient-vibrant mx-auto mb-6 sm:mb-8 rounded-full shadow-glow"></div>
-          </div>
-
-          <div className="space-y-4 sm:space-y-6">
-            {[
-              { time: "8:00 AM", activity: "Reporting & Registration", desc: "Participants arrive, confirm attendance, settle in, and receive their problem statements." },
-              { time: "9:00 AM", activity: "Hackathon Begins", desc: "Coding kicks off. Teams dive into building their AI-powered solutions." },
-              { time: "12:00 PM", activity: "Refreshments Break", desc: "Light snacks and drinks provided to recharge before the final push." },
-              { time: "3:00 PM", activity: "Coding Ends", desc: "Time's up! We assign judges. Teams prepare for their pitch." },
-              { time: "3:00 – 4:00 PM", activity: "Project Pitching", desc: "Each team presents their solution to the judging panel." },
-              { time: "5:00 PM", activity: "Results Announcement", desc: "Winners revealed, certificates/awards distributed, photos & wrap-up." },
-            ].map((item, index) => (
-              <Card key={index} className="bg-card border-2 border-primary/30 shadow-card hover:border-primary hover:shadow-neon-purple transition-all duration-300">
-                <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
-                  <div className="bg-primary/30 border-2 border-primary rounded-lg px-4 py-3 sm:px-6 sm:py-4 w-full sm:min-w-[160px] sm:w-auto shadow-neon-purple flex-shrink-0">
-                    <p className="text-primary font-bold text-base sm:text-lg text-center sm:text-left">{item.time}</p>
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-foreground font-bold text-base sm:text-lg mb-1">{item.activity}</p>
-                    <p className="text-muted-foreground text-sm sm:text-base">{item.desc}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Roadmap Section */}
       <section id="roadmap" className="py-16 sm:py-24 md:py-32">
