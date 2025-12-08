@@ -45,7 +45,7 @@ export const Navigation = () => {
             {/* Logo with hover effect */}
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-xl md:text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.5)] font-[Orbitron]"
+              className="text-xl md:text-2xl font-bold text-brand transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(139,92,246,0.6)]"
             >
               AIvolve
             </button>
