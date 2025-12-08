@@ -21,10 +21,8 @@ const Index = () => {
         
         <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10 pt-16 sm:pt-20">
           <div className="text-center max-w-5xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 sm:mb-8 font-[Orbitron]">
-              <span className="bg-gradient-vibrant bg-clip-text text-transparent drop-shadow-glow">
-                AIvolve
-              </span>
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 sm:mb-8">
+              <span className="text-brand-glow">AIvolve</span>
             </h1>
             
             <p className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground">
@@ -92,7 +90,7 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-5xl">
           <div className="text-center mb-10 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-4">
-              About <span className="text-primary drop-shadow-glow">AIvolve</span>
+              About <span className="text-brand-subtle">AIvolve</span>
             </h2>
             <div className="h-2 w-24 sm:w-32 bg-gradient-vibrant mx-auto mb-6 sm:mb-8 rounded-full shadow-glow"></div>
           </div>
@@ -325,7 +323,7 @@ const Index = () => {
               Our <span className="text-primary drop-shadow-glow">Team</span>
             </h2>
             <div className="h-2 w-24 sm:w-32 bg-gradient-vibrant mx-auto mb-6 sm:mb-8 rounded-full shadow-glow"></div>
-            <p className="text-muted-foreground text-base sm:text-lg md:text-xl px-4">Meet the minds behind AIvolve</p>
+            <p className="text-muted-foreground text-base sm:text-lg md:text-xl px-4">Meet the minds behind <span className="font-brand text-primary">AIvolve</span></p>
           </div>
 
           <div className="text-center mb-10 sm:mb-16">
@@ -372,7 +370,7 @@ const Index = () => {
             Ready to <span className="text-primary drop-shadow-glow">Evolve?</span>
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
-            Join us for an inspiring journey of innovation and creativity. Register now and be part of AIvolve!
+            Join us for an inspiring journey of innovation and creativity. Register now and be part of <span className="font-brand text-primary">AIvolve</span>!
           </p>
           <Button 
             variant="hero" 
@@ -389,7 +387,7 @@ const Index = () => {
       <footer className="py-8 sm:py-12 border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 text-center">
           <p className="text-muted-foreground text-sm sm:text-base">
-            © 2025 AIvolve. Organized by Department of CSE, PDACEK
+            © 2025 <span className="font-brand text-brand">AIvolve</span>. Organized by Department of CSE, PDACEK
           </p>
         </div>
       </footer>
