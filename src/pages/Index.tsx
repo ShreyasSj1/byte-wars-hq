@@ -160,8 +160,86 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Roadmap Section */}
+      <section id="roadmap" className="py-16 sm:py-24 md:py-32">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-5xl">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-4">
+              Event <span className="text-primary drop-shadow-glow">Roadmap</span>
+            </h2>
+            <div className="h-2 w-24 sm:w-32 bg-gradient-vibrant mx-auto mb-6 sm:mb-8 rounded-full shadow-glow"></div>
+            <p className="text-muted-foreground text-base sm:text-lg md:text-xl px-4">Your journey through AIvolve</p>
+          </div>
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* Vertical Line - Desktop */}
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-accent to-primary rounded-full shadow-glow"></div>
+            
+            {/* Vertical Line - Mobile */}
+            <div className="md:hidden absolute left-6 sm:left-8 w-1 h-full bg-gradient-to-b from-primary via-accent to-primary rounded-full shadow-glow"></div>
+
+            <div className="space-y-8 sm:space-y-12">
+              {[
+                { 
+                  icon: "🎯", 
+                  time: "8:00 AM", 
+                  title: "Problem Statement Reveal", 
+                  desc: "Teams report and receive their challenge themes." 
+                },
+                { 
+                  icon: "🚀", 
+                  time: "9:00 AM", 
+                  title: "Hackathon Starts", 
+                  desc: "Teams begin brainstorming and building their solution." 
+                },
+                { 
+                  icon: "💻", 
+                  time: "Until 3:00 PM", 
+                  title: "Development + Pitch Preparation", 
+                  desc: "Build your prototype, refine features, and prepare your presentation." 
+                },
+                { 
+                  icon: "🎤", 
+                  time: "3:00 - 4:00 PM", 
+                  title: "Project Pitching to Judges", 
+                  desc: "Teams showcase their solution, approach, and AI implementation." 
+                },
+                { 
+                  icon: "🏆", 
+                  time: "5:00 PM", 
+                  title: "Results & Prize Distribution", 
+                  desc: "Winners announced and awards handed out." 
+                },
+              ].map((item, index) => (
+                <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                  {/* Timeline Node */}
+                  <div className="absolute left-6 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-primary border-4 border-background shadow-neon-purple z-10"></div>
+                  
+                  {/* Content Card */}
+                  <div className={`ml-14 sm:ml-20 md:ml-0 md:w-[45%] ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
+                    <Card className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-purple hover:border-primary transition-all duration-300">
+                      <CardContent className="p-5 sm:p-6">
+                        <div className="flex items-center gap-3 sm:gap-4 mb-3">
+                          <span className="text-3xl sm:text-4xl">{item.icon}</span>
+                          <div className="bg-primary/20 border border-primary/50 rounded-lg px-3 py-1.5 sm:px-4 sm:py-2 shadow-neon-purple">
+                            <p className="text-primary font-bold text-sm sm:text-base">{item.time}</p>
+                          </div>
+                        </div>
+                        <h3 className="text-lg sm:text-xl font-bold mb-2 text-foreground">{item.title}</h3>
+                        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">{item.desc}</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Rules & Judging */}
-      <section className="py-16 sm:py-24 md:py-32">
+      <section className="py-16 sm:py-24 md:py-32 bg-gradient-primary">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             {/* Rules */}
