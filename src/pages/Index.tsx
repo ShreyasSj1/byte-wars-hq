@@ -36,17 +36,17 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-10 sm:mb-16">
               <div className="flex items-center gap-2 text-foreground text-sm sm:text-base">
                 <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                <span>December 21, 2025</span>
+                <span>December 20, 2025 • 8:00 AM</span>
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground"></div>
               <div className="flex items-center gap-2 text-foreground text-sm sm:text-base">
                 <Target className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                <span>PDA College, Kalaburgi</span>
+                <span>SAC Building, PDACEK</span>
               </div>
             </div>
             
             <div className="mb-10 sm:mb-16">
-              <Countdown targetDate="2025-12-21T08:00:00" />
+              <Countdown targetDate="2025-12-20T08:00:00" />
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
