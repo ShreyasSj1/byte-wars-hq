@@ -26,7 +26,7 @@ export const Navigation = () => {
   const navLinks = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
-    { id: "schedule", label: "Schedule" },
+    { id: "roadmap", label: "Roadmap" },
     { id: "prizes", label: "Prizes" },
     { id: "team", label: "Team" },
   ];
@@ -71,7 +71,7 @@ export const Navigation = () => {
               className="hidden md:inline-flex transition-all duration-250 hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]"
               onClick={() => window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank')}
             >
-              Join Now
+              Register Now
             </Button>
 
             {/* Mobile Menu Button with animation */}
@@ -126,7 +126,7 @@ export const Navigation = () => {
               setIsMobileMenuOpen(false);
             }}
           >
-            Join Now
+            Register Now
           </Button>
         </div>
       </div>
