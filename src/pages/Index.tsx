@@ -98,25 +98,35 @@ const Index = () => {
           <Card className="bg-card border-2 border-primary/30 shadow-card hover:shadow-glow transition-shadow">
             <CardContent className="p-6 sm:p-8 md:p-10">
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                🚀 Get ready for an inspiring 8-hour innovation journey! AIvolve is your gateway to exploring 
-                the future of technology where human creativity meets artificial intelligence.
+                <span className="text-brand-subtle font-bold">AIvolve</span> is where ideas stop being ideas — and become innovation.
               </p>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                This experience is crafted and guided by passionate senior students from the Computer Science Department—mentors 
-                who understand the thrill of building something meaningful. Plus, you'll have expert support from our dedicated faculty 
-                members to nurture your ideas and sharpen your skills.
+                An 8-hour sprint of imagination, engineering, caffeine, and breakthroughs, this hackathon invites you to step into the frontier where intelligence is created, not just consumed. Here, humans and AI build together — fast, bold, and without limits.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
+                You won't just be coding.<br />
+                You'll be solving. Designing. Inventing.<br />
+                You'll watch an idea evolve into something real.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
+                Mentors and senior innovators from the Computer Science community will guide you throughout the journey — and with the right push, the solution you build here could be the first of many.
               </p>
               <div className="bg-primary/20 border-l-4 border-primary p-4 sm:p-6 rounded-lg shadow-neon-purple mb-4 sm:mb-6">
                 <p className="text-foreground font-bold text-base sm:text-lg mb-2 sm:mb-3">
-                  <Sparkles className="inline w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-primary" />
-                  🧠 The Vision: 8 transformative hours to build an innovative AI-powered solution.
+                  🌟 What AIvolve Represents
+                </p>
+                <p className="text-foreground font-bold text-base sm:text-lg mb-2">
+                  💭 The Vision — Create future-forward projects powered by AI in just 8 hours.
                 </p>
                 <p className="text-foreground font-bold text-base sm:text-lg">
-                  🤝 The Spirit: Collaborative, inspiring, and perfect for students who love exploring new possibilities.
+                  🧠 The Spirit — Learn together. Build together. Grow together.
                 </p>
               </div>
-              <p className="text-muted-foreground text-base sm:text-lg font-semibold">
-                Bring your curiosity, gather your dream team, and let's evolve ideas into reality. The future is waiting—are you ready to shape it?
+              <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-4">
+                Bring a team, bring a dream, and bring the fire to build something that didn't exist yesterday. This is your chance to think fearlessly, build relentlessly, and evolve.
+              </p>
+              <p className="text-foreground font-bold text-base sm:text-lg">
+                The future needs builders. Are you stepping in? 🚀
               </p>
             </CardContent>
           </Card>
