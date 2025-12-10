@@ -101,7 +101,7 @@ const Index = () => {
                 <span className="text-brand-subtle font-bold">AIvolve</span> is where ideas stop being ideas — and become innovation.
               </p>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                An 8-hour sprint of imagination, engineering, caffeine, and breakthroughs, this hackathon invites you to step into the frontier where intelligence is created, not just consumed. Here, humans and AI build together — fast, bold, and without limits.
+                A 6-hour sprint of imagination, engineering, caffeine, and breakthroughs, this hackathon invites you to step into the frontier where intelligence is created, not just consumed. Here, humans and AI build together — fast, bold, and without limits.
               </p>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                 You won't just be coding.<br />
@@ -116,7 +116,7 @@ const Index = () => {
                   🌟 What AIvolve Represents
                 </p>
                 <p className="text-foreground font-bold text-base sm:text-lg mb-2">
-                  💭 The Vision — Create future-forward projects powered by AI in just 8 hours.
+                  💭 The Vision — Create future-forward projects powered by AI in just 6 hours.
                 </p>
                 <p className="text-foreground font-bold text-base sm:text-lg">
                   🧠 The Spirit — Learn together. Build together. Grow together.
