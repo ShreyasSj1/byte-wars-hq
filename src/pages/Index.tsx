@@ -359,8 +359,8 @@ const Index = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
-              { name: "Soumya Mantha", role: "Event Coordinator", image: teamSpoorthi },
               { name: "Spoorthi SJ", role: "Event Coordinator", image: teamSoumya },
+              { name: "Soumya Mantha", role: "Event Coordinator", image: teamSpoorthi },
               { name: "Mohommed Areeb", role: "Event Coordinator", image: teamAreeb },
             ].map((member, index) => (
               <Card key={index} className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-purple hover:border-primary transition-all duration-300">
