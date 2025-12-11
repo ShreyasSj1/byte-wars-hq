@@ -351,8 +351,8 @@ const Index = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
-              { name: "Soumya Mantha", role: "Event Coordinator", image: teamSoumya },
-              { name: "Spoorthi SJ", role: "Event Coordinator", image: teamSpoorthi },
+              { name: "Soumya Mantha", role: "Event Coordinator", image: teamSpoorthi },
+              { name: "Spoorthi SJ", role: "Event Coordinator", image: teamSoumya },
               { name: "Mohommed Areeb", role: "Event Coordinator", image: teamAreeb },
             ].map((member, index) => (
               <Card key={index} className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-purple hover:border-primary transition-all duration-300">
@@ -362,7 +362,8 @@ const Index = () => {
                     alt={member.name}
                     className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 sm:mb-6 shadow-glow object-cover"
                   />
-                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">{member.name}</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">{member.name}</h3>
+                  <p className="text-muted-foreground text-sm sm:text-base mb-2">4th Year, PDACEK</p>
                   <p className="text-primary font-bold text-base sm:text-lg">{member.role}</p>
                 </CardContent>
               </Card>
