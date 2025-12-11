@@ -343,8 +343,9 @@ const Index = () => {
             <Card className="bg-card border-2 border-accent/30 shadow-card hover:shadow-neon-pink inline-block transition-shadow max-w-md mx-auto">
               <CardContent className="p-8 sm:p-10 md:p-12">
                 <Award className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 text-accent drop-shadow-glow" />
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 sm:mb-3">Faculty Coordinator</h3>
-                <p className="text-muted-foreground text-base sm:text-lg">Name & Designation</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-1">Dr. Sharanabasappa G</h3>
+                <p className="text-muted-foreground text-sm sm:text-base mb-2">Associate Professor, Dept of CSE</p>
+                <p className="text-primary font-bold text-base sm:text-lg">Faculty Coordinator</p>
               </CardContent>
             </Card>
           </div>
