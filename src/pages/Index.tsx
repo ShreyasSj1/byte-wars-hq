@@ -5,6 +5,9 @@ import { FloatingShapes } from "@/components/FloatingShapes";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Brain, Lightbulb, Trophy, Users, Clock, Target, Sparkles, Award } from "lucide-react";
+import teamSpoorthi from "@/assets/team-spoorthi.jpeg";
+import teamSoumya from "@/assets/team-soumya.jpeg";
+import teamAreeb from "@/assets/team-areeb.jpeg";
 
 const Index = () => {
   return (
@@ -348,24 +351,19 @@ const Index = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
-              { role: "Event Coordinator", name: "Student Name" },
-              { role: "Tech Mentor", name: "Student Name" },
-              { role: "Designer", name: "Student Name" },
+              { name: "Soumya Mantha", role: "Event Coordinator", image: teamSoumya },
+              { name: "Spoorthi SJ", role: "Event Coordinator", image: teamSpoorthi },
+              { name: "Mohommed Areeb", role: "Event Coordinator", image: teamAreeb },
             ].map((member, index) => (
               <Card key={index} className="bg-card border-2 border-primary/30 shadow-card hover:shadow-neon-purple hover:border-primary transition-all duration-300">
                 <CardContent className="p-6 sm:p-8 text-center">
-                  <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-gradient-neural mx-auto mb-4 sm:mb-6 shadow-glow"></div>
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 sm:mb-6 shadow-glow object-cover"
+                  />
                   <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">{member.name}</h3>
-                  <p className="text-primary font-bold mb-4 sm:mb-6 text-base sm:text-lg">{member.role}</p>
-                  <div className="flex gap-3 justify-center text-sm sm:text-base">
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-semibold">
-                      LinkedIn
-                    </a>
-                    <span className="text-muted-foreground">•</span>
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-semibold">
-                      Instagram
-                    </a>
-                  </div>
+                  <p className="text-primary font-bold text-base sm:text-lg">{member.role}</p>
                 </CardContent>
               </Card>
             ))}
