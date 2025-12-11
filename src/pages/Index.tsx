@@ -340,19 +340,21 @@ const Index = () => {
             <p className="text-muted-foreground text-base sm:text-lg md:text-xl px-4">Meet the minds behind <span className="font-brand text-primary">AIvolve</span></p>
           </div>
 
-          <div className="text-center mb-10 sm:mb-16">
-            <Card className="bg-card border-2 border-accent/30 shadow-card hover:shadow-neon-pink inline-block transition-shadow max-w-md mx-auto">
-              <CardContent className="p-6 sm:p-8 text-center">
-                <img 
-                  src={teamFaculty} 
-                  alt="Dr. Sharanabasappa G"
-                  className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 sm:mb-6 shadow-glow object-cover"
-                />
-                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">Dr. Sharanabasappa G</h3>
-                <p className="text-muted-foreground text-sm sm:text-base mb-2">Associate Professor, Dept of CSE</p>
-                <p className="text-accent font-bold text-base sm:text-lg">Faculty Coordinator</p>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
+            <div className="sm:col-start-2 md:col-start-2">
+              <Card className="bg-card border-2 border-accent/30 shadow-card hover:shadow-neon-pink hover:border-accent transition-all duration-300">
+                <CardContent className="p-6 sm:p-8 text-center">
+                  <img 
+                    src={teamFaculty} 
+                    alt="Dr. Sharanabasappa G"
+                    className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 sm:mb-6 shadow-glow object-cover"
+                  />
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">Dr. Sharanabasappa G</h3>
+                  <p className="text-muted-foreground text-sm sm:text-base mb-2">Associate Professor, Dept of CSE</p>
+                  <p className="text-accent font-bold text-base sm:text-lg">Faculty Coordinator</p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
