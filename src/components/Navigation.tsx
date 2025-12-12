@@ -29,6 +29,7 @@ export const Navigation = () => {
     { id: "roadmap", label: "Roadmap" },
     { id: "prizes", label: "Prizes" },
     { id: "team", label: "Team" },
+    { id: "contact", label: "Contact Us" },
   ];
 
   return (
