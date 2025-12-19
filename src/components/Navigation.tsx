@@ -11,9 +11,21 @@ export const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -35,29 +47,29 @@ export const Navigation = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${
           isScrolled 
-            ? "bg-background/98 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.4)] border-b border-primary/10" 
+            ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-primary/10" 
             : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-6 md:px-10 lg:px-12">
-          <div className="flex items-center justify-between h-20 md:h-24">
-            {/* Logo with hover effect */}
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex items-center justify-between h-16 sm:h-20">
+            {/* Logo */}
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-xl md:text-2xl font-bold text-brand transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(139,92,246,0.6)]"
+              className="text-lg sm:text-xl font-bold text-brand transition-all duration-300 hover:scale-105 active:scale-95"
             >
               AIvolve
             </button>
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-2 lg:gap-4">
+            <div className="hidden md:flex items-center gap-1 lg:gap-2">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="relative px-4 lg:px-5 py-2 text-foreground font-semibold text-sm lg:text-base transition-all duration-250 hover:text-primary hover:scale-105 group"
+                  className="relative px-3 lg:px-4 py-2 text-foreground font-medium text-sm transition-all duration-200 hover:text-primary group"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -69,27 +81,30 @@ export const Navigation = () => {
             <Button 
               variant="hero" 
               size="sm" 
-              className="hidden md:inline-flex transition-all duration-250 hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]"
+              className="hidden md:inline-flex btn-tap text-sm"
               onClick={() => window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank')}
             >
               Register Now
             </Button>
 
-            {/* Mobile Menu Button with animation */}
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-foreground hover:text-primary transition-all duration-250 hover:scale-110 hover:rotate-90 p-2"
+              className="md:hidden text-foreground hover:text-primary transition-colors duration-200 p-2 tap-target"
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <div className="relative w-6 h-6">
+                <Menu className={`w-6 h-6 absolute transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0 rotate-90 scale-50' : 'opacity-100 rotate-0 scale-100'}`} />
+                <X className={`w-6 h-6 absolute transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-50'}`} />
+              </div>
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay with fade */}
+      {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-background/90 backdrop-blur-md z-40 md:hidden transition-all duration-300 ${
+        className={`fixed inset-0 bg-background/80 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 ${
           isMobileMenuOpen 
             ? "opacity-100 pointer-events-auto" 
             : "opacity-0 pointer-events-none"
@@ -97,38 +112,43 @@ export const Navigation = () => {
         onClick={() => setIsMobileMenuOpen(false)}
       />
 
-      {/* Mobile Menu Panel with slide and fade */}
+      {/* Mobile Menu Panel */}
       <div
-        className={`fixed top-20 right-0 h-[calc(100vh-5rem)] w-72 bg-card/98 backdrop-blur-lg border-l-2 border-primary/40 shadow-[-8px_0_32px_rgba(0,0,0,0.5)] z-40 md:hidden transition-all duration-300 ease-out ${
+        className={`fixed top-16 right-0 bottom-0 w-full max-w-xs bg-card/98 backdrop-blur-lg border-l border-primary/20 shadow-xl z-40 md:hidden transition-transform duration-300 ease-out ${
           isMobileMenuOpen 
-            ? "translate-x-0 opacity-100" 
-            : "translate-x-full opacity-0"
+            ? "translate-x-0" 
+            : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col p-8 gap-2">
+        <div className="flex flex-col p-6 gap-1 h-full">
           {navLinks.map((link, index) => (
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className="group relative text-left text-foreground hover:text-primary transition-all duration-250 font-semibold text-lg py-4 px-4 rounded-lg hover:bg-primary/5 hover:scale-105 hover:translate-x-2 animate-fade-in"
+              className={`group relative text-left text-foreground hover:text-primary transition-all duration-200 font-medium text-base py-3.5 px-4 rounded-lg hover:bg-primary/5 active:scale-[0.98] tap-target ${
+                isMobileMenuOpen ? 'animate-fade-in' : ''
+              }`}
               style={{ animationDelay: `${index * 50}ms` }}
             >
               {link.label}
-              <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-gradient-accent group-hover:h-8 transition-all duration-250 rounded-r" />
+              <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-gradient-accent group-hover:h-6 transition-all duration-200 rounded-r" />
             </button>
           ))}
-          <Button
-            variant="hero"
-            size="lg"
-            className="mt-6 w-full animate-fade-in transition-all duration-250 hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]"
-            style={{ animationDelay: "250ms" }}
-            onClick={() => {
-              window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank');
-              setIsMobileMenuOpen(false);
-            }}
-          >
-            Register Now
-          </Button>
+          
+          <div className="mt-auto pt-6 border-t border-border">
+            <Button
+              variant="hero"
+              size="lg"
+              className={`w-full btn-tap ${isMobileMenuOpen ? 'animate-fade-in' : ''}`}
+              style={{ animationDelay: "200ms" }}
+              onClick={() => {
+                window.open('https://forms.gle/DAu7Bm6hov77dXLV6', '_blank');
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Register Now
+            </Button>
+          </div>
         </div>
       </div>
     </>
